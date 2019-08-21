@@ -17,6 +17,9 @@
         <spring-jdbc.version>4.3.10.RELEASE</spring-jdbc.version>
         <commons-beanutils.version>1.9.3</commons-beanutils.version>
         <lombok.version>1.16.18</lombok.version>
+        <jackson-databind.version>2.9.6</jackson-databind.version>
+        <jackson-annotations.version>2.9.0</jackson-annotations.version>
+        <jackson-core.version>2.9.6</jackson-core.version>
     </properties>
 
 
@@ -61,13 +64,6 @@
 
 
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
-            <version>${springboot.version}</version>
-        </dependency>
-
-
-        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
@@ -79,6 +75,25 @@
             <groupId>commons-beanutils</groupId>
             <artifactId>commons-beanutils</artifactId>
             <version>${commons-beanutils.version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson-databind.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>${jackson-annotations.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>${jackson-core.version}</version>
         </dependency>
 
     </dependencies>
