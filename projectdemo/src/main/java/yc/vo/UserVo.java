@@ -1,11 +1,12 @@
 package yc.vo;
 
 import lombok.Data;
-import yc.util.GenderEnum;
 
 @Data
 public class UserVo {
 
+
+    private Long id;
 
     private String userName;
 
