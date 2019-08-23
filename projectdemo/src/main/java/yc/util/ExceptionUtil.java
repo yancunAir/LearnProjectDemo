@@ -23,8 +23,8 @@ public class ExceptionUtil {
         try{
             sw.close();
             pw.close();
-        }catch(IOException e){
-            e.printStackTrace();
+        }catch(IOException exce){
+            exce.printStackTrace();
         }
         return sw.toString();
     }
