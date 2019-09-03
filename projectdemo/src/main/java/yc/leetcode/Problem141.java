@@ -2,6 +2,9 @@ package yc.leetcode;
 
 import yc.list.ListNode;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class Problem141 {
 
     public static boolean hasCycle(ListNode head) {
@@ -20,6 +23,31 @@ public class Problem141 {
         }
         return true;
 
+
+    }
+
+    public static boolean hasCycle2(ListNode head){
+
+        if(head == null || head.next == null){
+            return false;
+        }
+
+        Set<ListNode> nodeSet = new HashSet<>();
+
+        while(head!= null){
+
+             if(nodeSet.contains(head)){
+                 return true;
+             }else{
+                 nodeSet.add(head);
+             }
+
+            head = head.next;
+
+
+        }
+
+        return false;
 
     }
 
