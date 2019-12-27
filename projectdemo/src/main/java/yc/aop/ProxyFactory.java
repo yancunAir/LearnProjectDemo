@@ -10,7 +10,6 @@ public class ProxyFactory {
     private BeforeAdvice beforeAdvice;
     private AfterAdvice afterAdvice;
 
-
     public Object createProxy() {
 
         ClassLoader loader = this.getClass().getClassLoader();

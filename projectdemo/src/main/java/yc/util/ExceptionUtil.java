@@ -1,14 +1,22 @@
 package yc.util;
 
+import org.apache.commons.lang3.time.StopWatch;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.time.Instant;
+import java.util.concurrent.TimeUnit;
 
 /**
  * 异常输出工具类
  */
 public class ExceptionUtil {
 
+
+    public static void main(String[] args) {
+        System.out.println(demo ());
+    }
 
     /**
      *  将异常以字符串的形式输出
@@ -29,5 +37,31 @@ public class ExceptionUtil {
         return sw.toString();
     }
 
+
+    public static String demo () {
+        StopWatch watch = new StopWatch();
+        try {
+            watch.start();
+
+           Thread.sleep(2000);
+
+
+
+            throw new Exception("1");
+        }
+        catch (Exception ex)  {
+            System.out.println("catch");
+            return "Success";
+        }
+        finally {
+            watch.stop();
+            System.out.println("finally");
+            System.out.println("花费时间：" +watch.getTime(TimeUnit.SECONDS));
+            return "finallytwo";
+        }
+
+
+
+    }
 
 }
